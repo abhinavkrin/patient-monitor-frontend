@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import { useState } from 'react';
 // material
 import { styled } from '@mui/material/styles';

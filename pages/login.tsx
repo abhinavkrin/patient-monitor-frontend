@@ -81,7 +81,7 @@ export default withAuthUser()(function Login() {
 
   useEffect(() => {
 		if (user.id) {
-      window.location.href = ( `${(router.query.redirect as String || '')}` || "/");
+      router.push('/');
 		}
   }, [user.id, router]);
 

@@ -71,6 +71,7 @@ export const getServerSideProps = withAuthUserTokenSSR({
 	whenUnauthed: AuthAction.REDIRECT_TO_LOGIN
 })(async (ctx) => {
 	const token = await ctx.AuthUser.getIdToken();
+	console.log("TOken, "+token)
 	if(token){
 		const devices = await api('GET', '/devices',null, token);
 		return {
